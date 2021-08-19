@@ -3,7 +3,7 @@ FROM python:3.9.6
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY src/requirements.txt .
+COPY requirements.txt .
 RUN pip install -U --no-cache-dir -r requirements.txt
 RUN pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.4.0/en_ner_bc5cdr_md-0.4.0.tar.gz
 RUN mkdir -p datasets
